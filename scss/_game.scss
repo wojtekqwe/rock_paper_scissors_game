@@ -1,0 +1,50 @@
+.game {
+  height: 540px;
+  margin: auto;
+  width: 560px;
+
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  // For style triangle
+  position: relative;
+
+  &__triangle {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__option {
+    width: 50%;
+    z-index: 1;
+  }
+}
+
+.option {
+  &__background {
+    background-color: $light-color;
+    border-radius: 50%;
+    box-shadow: 0 0 0 25px $lizard-gradient-end;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--yellow {
+      box-shadow: 0 0 0 25px $scissors-gradient-end;
+    }
+    &--red {
+      box-shadow: 0 0 0 25px $rock-gradient-end;
+    }
+
+    & img {
+      height: 50%;
+    }
+  }
+}
