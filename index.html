@@ -21,19 +21,38 @@
     <link rel="stylesheet" href="css/style.css" />
 
     Score Rules You Picked The House Picked You Win You Lose Play Again
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
+    <main>
+      <div class="nav">
+        <div class="nav__logo">
+          <img src="./images/logo.svg" alt="Logo rock, scissors, paper" />
+        </div>
+        <div class="nav__result result">
+          <p class="result__description">Score</p>
+          <p class="result__point" id="point">0</p>
+        </div>
+      </div>
+      <div class="game">
+        <!-- Maybe use box shadow in css -->
+        <div class="game__option">
+          <img src="./images/icon-paper.svg" alt="Paper icon" />
+        </div>
+        <div class="game__option game__option--scissors">
+          <img src="./images/icon-scissors.svg" alt="Scissors icon" />
+        </div>
+        <div class="game__option game__option--rock">
+          <img src="./images/icon-rock.svg" alt="Scissors icon" />
+        </div>
+        <div class="game__triangle">
+          <img src="./images/bg-triangle.svg" alt="Triangle" />
+        </div>
+      </div>
+      <div class="more">
+        <button class="btn">Rules</button>
+      </div>
+    </main>
+
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
