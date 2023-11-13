@@ -1,0 +1,32 @@
+.nav {
+  @include flex-position(row, space-between, center, 20px);
+  border: 4px solid $header-outline;
+  border-radius: 15px;
+  min-width: 400px;
+  &__logo {
+    height: 100px;
+    padding: 0 10px;
+    & img {
+      height: 100%;
+    }
+  }
+  &__result {
+    @include flex-position(column, space-between, center, 15px 5px);
+    background-color: $light-color;
+    border-radius: 10px;
+    height: 120px;
+    min-width: 120px;
+    width: 120px;
+  }
+}
+
+.result {
+  &__description {
+    @include font-title(18px, $dark-text);
+  }
+  &__point {
+    @include font-title(56px, $dark-text);
+    font-weight: 700;
+    margin: auto;
+  }
+}

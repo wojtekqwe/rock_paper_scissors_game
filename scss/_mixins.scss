@@ -1,0 +1,15 @@
+@mixin flex-position($direction, $justify, $align, $padding) {
+  align-items: $align;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  padding: $padding;
+}
+
+@mixin font-title($size, $color) {
+  color: $color;
+  font-size: $size;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
