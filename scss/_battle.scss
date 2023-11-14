@@ -1,0 +1,22 @@
+.battle {
+  display: none;
+  justify-content: center;
+  &__option {
+    cursor: default;
+    padding: 20px;
+    pointer-events: none;
+  }
+  &__space {
+    width: 100px;
+  }
+  &__title {
+    @include font-title(16px, $light-color);
+    margin-bottom: 35px;
+    padding: 5px;
+  }
+
+  & .option__background {
+    height: 240px;
+    width: 240px;
+  }
+}

@@ -31,11 +31,9 @@
           <p class="result__point" id="point">0</p>
         </div>
       </div>
+
+      <!-- Basic view  -->
       <div class="game">
-        <!-- Maybe use box shadow in css -->
-        <!-- <div class="game__option">
-          <img src="./images/icon-paper.svg" alt="Paper icon" />
-        </div> -->
         <div class="game__option option">
           <div class="option__background">
             <div class="option__border">
@@ -62,6 +60,28 @@
           <img src="./images/bg-triangle.svg" alt="Triangle" />
         </div>
       </div>
+
+      <!-- Battle view  -->
+      <div class="battle">
+        <div class="battle__option option" id="your-choice">
+          <h2 class="battle__title">You picked</h2>
+          <div class="option__background">
+            <div class="option__border">
+              <img src="./images/icon-paper.svg" alt="Paper icon" />
+            </div>
+          </div>
+        </div>
+        <div class="battle__space"></div>
+        <div class="battle__option option" id="comp-choice">
+          <h2 class="battle__title">The house picked</h2>
+          <div class="option__background option__background--yellow">
+            <div class="option__border">
+              <img src="./images/icon-scissors.svg" alt="Scissors icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="more">
         <button class="more__btn btn">Rules</button>
       </div>
@@ -73,5 +93,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">wojtekqwe</a>.
     </div>
+
+    <script src="code.js"></script>
   </body>
 </html>

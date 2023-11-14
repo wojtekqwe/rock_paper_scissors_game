@@ -81,6 +81,7 @@
   height: 500px;
   margin: auto;
   width: 500px;
+  visibility: visible;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -104,6 +105,23 @@
 .game__option {
   width: 50%;
   z-index: 1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.game.hide {
+  visibility: hidden;
+}
+.game.hide .game__option {
+  display: none;
+}
+.game.hide .game__option.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: visible;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 .option {
@@ -186,6 +204,12 @@
           transform: scale(1.1);
 }
 
+.space {
+  width: 30px;
+  background-color: red;
+  height: 50px;
+}
+
 .btn {
   background-color: transparent;
   border: 2px solid hsl(0, 0%, 97%);
@@ -226,6 +250,34 @@
     text-align: right;
   }
 }
+.battle {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.battle__option {
+  cursor: default;
+  padding: 20px;
+  pointer-events: none;
+}
+.battle__space {
+  width: 100px;
+}
+.battle__title {
+  color: hsl(0, 0%, 97%);
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 35px;
+  padding: 5px;
+}
+.battle .option__background {
+  height: 240px;
+  width: 240px;
+}
+
 body {
   -webkit-box-align: center;
       -ms-flex-align: center;

@@ -2,6 +2,7 @@
   height: 500px;
   margin: auto;
   width: 500px;
+  visibility: visible;
 
   align-items: center;
   display: flex;
@@ -20,7 +21,22 @@
   &__option {
     width: 50%;
     z-index: 1;
+    transition: all 0.5s;
   }
+}
+
+.game.hide {
+  visibility: hidden;
+  & .game__option {
+    display: none;
+  }
+  & .game__option.active {
+    display: flex;
+    visibility: visible;
+    transform: scale(1.4);
+  }
+
+  // Duplicate element and change figure
 }
 
 .option {
@@ -74,4 +90,10 @@
   &:hover {
     transform: scale(1.1);
   }
+}
+
+.space {
+  width: 30px;
+  background-color: red;
+  height: 50px;
 }
