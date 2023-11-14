@@ -30,3 +30,10 @@
     margin: auto;
   }
 }
+
+@media screen and (min-width: 992px) {
+  .nav {
+    margin: 10px auto;
+    width: 75%;
+  }
+}

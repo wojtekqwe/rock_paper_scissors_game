@@ -1,5 +1,7 @@
 .game {
-  height: 540px;
+  height: 500px;
+  margin: auto;
+  width: 500px;
 
   align-items: center;
   display: flex;
@@ -22,6 +24,9 @@
 }
 
 .option {
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.25s;
   &__background {
     @include flex-position(row, center, center, 0);
     background-color: $lizard-gradient-end;
@@ -64,5 +69,9 @@
       right: 0;
       top: 7px;
     }
+  }
+
+  &:hover {
+    transform: scale(1.1);
   }
 }

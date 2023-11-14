@@ -71,8 +71,16 @@
   margin: auto;
 }
 
+@media screen and (min-width: 992px) {
+  .nav {
+    margin: 10px auto;
+    width: 75%;
+  }
+}
 .game {
-  height: 540px;
+  height: 500px;
+  margin: auto;
+  width: 500px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -98,6 +106,13 @@
   z-index: 1;
 }
 
+.option {
+  cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
 .option__background {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -166,16 +181,27 @@
   right: 0;
   top: 7px;
 }
+.option:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 
 .btn {
   background-color: transparent;
   border: 2px solid hsl(0, 0%, 97%);
   border-radius: 10px;
   color: hsl(0, 0%, 97%);
+  cursor: pointer;
   font-size: 20px;
   letter-spacing: 1.5px;
   padding: 15px 40px;
   text-transform: uppercase;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.btn:hover {
+  background-color: hsl(0, 0%, 97%);
+  color: hsl(237, 49%, 15%);
 }
 
 .attribution {
@@ -195,6 +221,11 @@
   text-decoration: none;
 }
 
+@media screen and (min-width: 992px) {
+  .more {
+    text-align: right;
+  }
+}
 body {
   -webkit-box-align: center;
       -ms-flex-align: center;
