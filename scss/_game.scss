@@ -1,7 +1,5 @@
 .game {
   height: 540px;
-  margin: auto;
-  width: 560px;
 
   align-items: center;
   display: flex;
@@ -25,26 +23,46 @@
 
 .option {
   &__background {
-    background-color: $light-color;
+    @include flex-position(row, center, center, 0);
+    background-color: $lizard-gradient-end;
     border-radius: 50%;
-    box-shadow: 0 0 0 25px $lizard-gradient-end;
-    height: 150px;
-    width: 150px;
+    box-shadow: 0 8px 0 0 darken($lizard-gradient-end, 30%);
+    height: 160px;
+    width: 160px;
     margin: auto;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     &--yellow {
-      box-shadow: 0 0 0 25px $scissors-gradient-end;
+      background-color: $scissors-gradient-end;
+      box-shadow: 0 8px 0 0 darken($scissors-gradient-end, 30%);
     }
     &--red {
-      box-shadow: 0 0 0 25px $rock-gradient-end;
+      background-color: $rock-gradient-start;
+      box-shadow: 0 8px 0 0 darken($rock-gradient-end, 30%);
     }
 
     & img {
       height: 50%;
+    }
+  }
+  &__border {
+    @include flex-position(row, center, center, 0);
+
+    background-color: $light-color;
+    border-radius: 50%;
+    height: 75%;
+    width: 75%;
+
+    // Add shade to circles
+    position: relative;
+    &::before {
+      content: "";
+      border-radius: 50%;
+      box-shadow: 0 -8px 0 0 darken($light-color, 30%);
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 7px;
     }
   }
 }
