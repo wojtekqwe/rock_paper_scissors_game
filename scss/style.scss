@@ -5,6 +5,7 @@
 @import "game";
 @import "more";
 @import "battle";
+@import "rules";
 
 body {
   align-items: center;
@@ -17,6 +18,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  overflow: hidden;
+
+  // Position for rules and background
+  position: relative;
 }
 
 main {

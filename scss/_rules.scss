@@ -1,0 +1,109 @@
+.rules {
+  @include flex-position(column, center, stretch, 50px);
+
+  background-color: $light-color;
+  left: 0;
+  filter: grayscale(200%);
+  height: 100%;
+  min-width: 500px;
+  position: absolute;
+  top: 0;
+  transform: translateY(100%);
+  transition: 0.5s;
+  width: 100%;
+  z-index: 2;
+
+  &__container {
+    @include flex-position(row, center, center, 0);
+    flex-wrap: wrap;
+    height: 400px;
+    margin: 0 auto 100px;
+    width: 500px;
+
+    // For stylish arrows
+    position: relative;
+
+    & .arrow {
+      left: 225px;
+      position: absolute;
+      top: 45px;
+      & p {
+        @include font-title(18px, $radial-gradient-end);
+      }
+      & i {
+        font-size: 50px;
+        color: $radial-gradient-end;
+      }
+
+      &--left {
+        display: flex;
+        left: 105px;
+        top: 205px;
+        transform: rotate(-40deg);
+        & p {
+          transform: rotate(40deg);
+        }
+      }
+      &--right {
+        display: block;
+        left: 300px;
+        top: 180px;
+        transform: rotate(310deg);
+        & p {
+          transform: rotate(50deg);
+        }
+      }
+    }
+  }
+  &__title {
+    @include font-title(60px, $radial-gradient-end);
+    margin-bottom: 100px;
+    width: 100%;
+  }
+  &__option {
+    pointer-events: none;
+    width: 50%;
+  }
+  &__close {
+    cursor: pointer;
+    height: 40px;
+    transition: 0.25s;
+    & img {
+      height: 100%;
+    }
+    &:hover {
+      transform: scale(1.1) rotate(90deg);
+    }
+  }
+}
+
+// Change position after click btn
+.rules.active {
+  transform: translateY(0);
+}
+
+@media screen and (min-width: 992px) {
+  .rules {
+    border-radius: 35px;
+    top: 50%;
+    left: 50%;
+    height: 65%;
+    margin-bottom: 50px;
+    min-height: 800px;
+    width: 75%;
+    transform: translate(-50%, 100%);
+  }
+}
+
+.rules.activeDesktop {
+  transform: translate(-50%, -50%);
+}
+
+.background.active {
+  background: #00000082;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

@@ -5,6 +5,15 @@
     background-color: $light-color;
     color: $radial-gradient-end;
   }
+  &--again {
+    background-color: $light-color;
+    color: $radial-gradient-end;
+    padding: 10px 25px;
+    &:hover {
+      background-color: transparent;
+      color: $light-color;
+    }
+  }
 }
 
 .attribution {

@@ -227,6 +227,15 @@
   background-color: hsl(0, 0%, 97%);
   color: hsl(237, 49%, 15%);
 }
+.btn--again {
+  background-color: hsl(0, 0%, 97%);
+  color: hsl(237, 49%, 15%);
+  padding: 10px 25px;
+}
+.btn--again:hover {
+  background-color: transparent;
+  color: hsl(0, 0%, 97%);
+}
 
 .attribution {
   background-color: black;
@@ -251,18 +260,30 @@
   }
 }
 .battle {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0;
+  height: 500px;
 }
 .battle__option {
   cursor: default;
   padding: 20px;
   pointer-events: none;
 }
-.battle__space {
-  width: 100px;
+.battle__score {
+  padding: 0 20px;
+}
+.battle__score .result {
+  color: hsl(0, 0%, 97%);
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
 }
 .battle__title {
   color: hsl(0, 0%, 97%);
@@ -274,8 +295,159 @@
   padding: 5px;
 }
 .battle .option__background {
-  height: 240px;
-  width: 240px;
+  height: 200px;
+  width: 200px;
+}
+
+.rules {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px;
+  background-color: hsl(0, 0%, 97%);
+  left: 0;
+  -webkit-filter: grayscale(200%);
+          filter: grayscale(200%);
+  height: 100%;
+  min-width: 500px;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 100%;
+  z-index: 2;
+}
+.rules__container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 400px;
+  margin: 0 auto 100px;
+  width: 500px;
+  position: relative;
+}
+.rules__container .arrow {
+  left: 225px;
+  position: absolute;
+  top: 45px;
+}
+.rules__container .arrow p {
+  color: hsl(237, 49%, 15%);
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.rules__container .arrow i {
+  font-size: 50px;
+  color: hsl(237, 49%, 15%);
+}
+.rules__container .arrow--left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 105px;
+  top: 205px;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+.rules__container .arrow--left p {
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+.rules__container .arrow--right {
+  display: block;
+  left: 300px;
+  top: 180px;
+  -webkit-transform: rotate(310deg);
+          transform: rotate(310deg);
+}
+.rules__container .arrow--right p {
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+}
+.rules__title {
+  color: hsl(237, 49%, 15%);
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 100px;
+  width: 100%;
+}
+.rules__option {
+  pointer-events: none;
+  width: 50%;
+}
+.rules__close {
+  cursor: pointer;
+  height: 40px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.rules__close img {
+  height: 100%;
+}
+.rules__close:hover {
+  -webkit-transform: scale(1.1) rotate(90deg);
+          transform: scale(1.1) rotate(90deg);
+}
+
+.rules.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+@media screen and (min-width: 992px) {
+  .rules {
+    border-radius: 35px;
+    top: 50%;
+    left: 50%;
+    height: 65%;
+    margin-bottom: 50px;
+    min-height: 800px;
+    width: 75%;
+    -webkit-transform: translate(-50%, 100%);
+            transform: translate(-50%, 100%);
+  }
+}
+.rules.activeDesktop {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.background.active {
+  background: rgba(0, 0, 0, 0.5098039216);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 body {
@@ -295,6 +467,8 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
 main {

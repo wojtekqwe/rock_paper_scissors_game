@@ -14,6 +14,12 @@
 
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
       rel="stylesheet"
@@ -71,7 +77,10 @@
             </div>
           </div>
         </div>
-        <div class="battle__space"></div>
+        <div class="battle__score">
+          <h2 class="result">You win</h2>
+          <button class="btn btn--again">Play again</button>
+        </div>
         <div class="battle__option option" id="comp-choice">
           <h2 class="battle__title">The house picked</h2>
           <div class="option__background option__background--yellow">
@@ -83,7 +92,51 @@
       </div>
 
       <div class="more">
-        <button class="more__btn btn">Rules</button>
+        <button class="more__btn btn" id="btn-rules">Rules</button>
+      </div>
+
+      <div class="background"></div>
+      <!-- Instruction -->
+      <div class="rules">
+        <h2 class="rules__title">Rules</h2>
+        <div class="rules__container">
+          <div class="rules__option option">
+            <div class="option__background">
+              <div class="option__border">
+                <img src="./images/icon-paper.svg" alt="Paper icon" />
+              </div>
+            </div>
+          </div>
+          <div class="arrow">
+            <p>Beats</p>
+            <i class="fa-solid fa-arrow-left-long"></i>
+          </div>
+          <div class="rules__option option">
+            <div class="option__background option__background--yellow">
+              <div class="option__border">
+                <img src="./images/icon-scissors.svg" alt="Scissors icon" />
+              </div>
+            </div>
+          </div>
+          <div class="arrow arrow--left">
+            <p>Beats</p>
+            <i class="fa-solid fa-arrow-down-long"></i>
+          </div>
+          <div class="rules__option option">
+            <div class="option__background option__background--red">
+              <div class="option__border">
+                <img src="./images/icon-rock.svg" alt="Rock icon" />
+              </div>
+            </div>
+          </div>
+          <div class="arrow arrow--right">
+            <i class="fa-solid fa-arrow-right-long"></i>
+            <p>Beats</p>
+          </div>
+        </div>
+        <div class="rules__close" id="close-rule">
+          <img src="./images/icon-close.svg" alt="" />
+        </div>
       </div>
     </main>
 

@@ -1,13 +1,21 @@
 .battle {
+  align-items: center;
   display: none;
-  justify-content: center;
+  justify-content: space-around;
+  margin: 0;
+  height: 500px;
   &__option {
     cursor: default;
     padding: 20px;
     pointer-events: none;
   }
-  &__space {
-    width: 100px;
+  &__score {
+    padding: 0 20px;
+
+    & .result {
+      @include font-title(32px, $light-color);
+      margin-bottom: 25px;
+    }
   }
   &__title {
     @include font-title(16px, $light-color);
@@ -16,7 +24,7 @@
   }
 
   & .option__background {
-    height: 240px;
-    width: 240px;
+    height: 200px;
+    width: 200px;
   }
 }
