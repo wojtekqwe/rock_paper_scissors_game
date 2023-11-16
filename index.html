@@ -40,21 +40,21 @@
 
       <!-- Basic view  -->
       <div class="game">
-        <div class="game__option option">
+        <div class="game__option option" id="paper">
           <div class="option__background">
             <div class="option__border">
               <img src="./images/icon-paper.svg" alt="Paper icon" />
             </div>
           </div>
         </div>
-        <div class="game__option option">
+        <div class="game__option option" id="scissors">
           <div class="option__background option__background--yellow">
             <div class="option__border">
               <img src="./images/icon-scissors.svg" alt="Scissors icon" />
             </div>
           </div>
         </div>
-        <div class="game__option option">
+        <div class="game__option option" id="rock">
           <div class="option__background option__background--red">
             <div class="option__border">
               <img src="./images/icon-rock.svg" alt="Rock icon" />
@@ -70,24 +70,24 @@
       <!-- Battle view  -->
       <div class="battle">
         <div class="battle__option option" id="your-choice">
-          <h2 class="battle__title">You picked</h2>
+          <!-- <h2 class="battle__title">You picked</h2>
           <div class="option__background">
             <div class="option__border">
               <img src="./images/icon-paper.svg" alt="Paper icon" />
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="battle__score">
-          <h2 class="result">You win</h2>
-          <button class="btn btn--again">Play again</button>
+          <!-- <h2 class="result">You win</h2>
+          <button class="btn btn--again">Play again</button> -->
         </div>
         <div class="battle__option option" id="comp-choice">
-          <h2 class="battle__title">The house picked</h2>
+          <!-- <h2 class="battle__title">The house picked</h2>
           <div class="option__background option__background--yellow">
             <div class="option__border">
               <img src="./images/icon-scissors.svg" alt="Scissors icon" />
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -147,6 +147,6 @@
       >. Coded by <a href="#">wojtekqwe</a>.
     </div>
 
-    <script src="code.js"></script>
+    <script type="module" src="js/code.js"></script>
   </body>
 </html>
