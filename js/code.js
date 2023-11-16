@@ -4,6 +4,7 @@ const game = new Game();
 const gameFigures = document.querySelectorAll(".game__option");
 const battle = document.querySelector(".battle");
 const scoreContainer = document.querySelector(".battle__score");
+const pointContainer = document.querySelector("#point");
 
 const ruleBtn = document.querySelector("#btn-rules");
 const closeRuleBtn = document.querySelector("#close-rule");
@@ -60,8 +61,7 @@ function fillComputerChoose(elements) {
 }
 
 function showScore() {
-  console.log("USER-> " + game.user);
-  console.log("COMPUTER-> " + game.computer);
+  let point = Number(pointContainer.textContent);
   if (
     (game.user === "SCISSORS" && game.computer === "PAPER") ||
     (game.user === "PAPER" && game.computer === "ROCK") ||
@@ -70,12 +70,20 @@ function showScore() {
     scoreContainer.innerHTML = `<h2 class="result">You win</h2>
     <button class="btn btn--again">Play again</button>
     `;
+    point++;
   } else if (game.user === game.computer) {
     scoreContainer.innerHTML = `<h2 class="result">Draw</h2>
     <button class="btn btn--again">Play again</button>`;
   } else {
     scoreContainer.innerHTML = `<h2 class="result">You loss</h2>
     <button class="btn btn--again">Play again</button>`;
+    point--;
+  }
+
+  if (point <= 0) {
+    pointContainer.textContent = 0;
+  } else {
+    pointContainer.textContent = point;
   }
 }
 
