@@ -35,11 +35,10 @@
     visibility: visible;
     transform: scale(1.4);
   }
-
-  // Duplicate element and change figure
 }
 
 .option {
+  box-shadow: 0 0 0 0 transparent;
   cursor: pointer;
   transform: scale(1);
   transition: 0.25s;
@@ -90,10 +89,4 @@
   &:hover {
     transform: scale(1.1);
   }
-}
-
-.space {
-  width: 30px;
-  background-color: red;
-  height: 50px;
 }

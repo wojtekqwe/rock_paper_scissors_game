@@ -11,6 +11,8 @@
   }
   &__score {
     padding: 0 20px;
+    transform: scale(0);
+    transition: 0.5s;
 
     & .result {
       @include font-title(32px, $light-color);
@@ -27,4 +29,8 @@
     height: 200px;
     width: 200px;
   }
+}
+
+.battle__score.active {
+  transform: scale(1);
 }

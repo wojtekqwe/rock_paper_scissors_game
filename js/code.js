@@ -1,6 +1,7 @@
 import { Game } from "./Game.js";
 const game = new Game();
 
+const gameContainer = document.querySelector(".game");
 const gameFigures = document.querySelectorAll(".game__option");
 const battle = document.querySelector(".battle");
 const scoreContainer = document.querySelector(".battle__score");
@@ -8,7 +9,6 @@ const pointContainer = document.querySelector("#point");
 
 const ruleBtn = document.querySelector("#btn-rules");
 const closeRuleBtn = document.querySelector("#close-rule");
-const playAgainBtn = document.querySelector(".btn--again");
 
 const rulesContainer = document.querySelector(".rules");
 const background = document.querySelector(".background");
@@ -85,6 +85,13 @@ function showScore() {
   } else {
     pointContainer.textContent = point;
   }
+
+  scoreContainer.classList.add("active");
+
+  scoreContainer.querySelector(".btn--again").addEventListener("click", () => {
+    battle.style.display = "none";
+    gameContainer.style.display = "flex";
+  });
 }
 
 // Change view after choose figure
@@ -95,6 +102,11 @@ gameFigures.forEach((figure) => {
 
     // Image and color border figure
     fillUserChoose(figure);
+
+    // Clear computer choose and result
+    battle.querySelector("#comp-choice").innerHTML = "<div></div>";
+    scoreContainer.innerHTML = "<div></div>";
+
     setTimeout(() => {
       fillComputerChoose(gameFigures);
     }, 2000);
