@@ -11,7 +11,7 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
 ![Mobile view - rules](./images/screenshots/mobile_view_rules.png)
 ![Desktop view](./images/screenshots/desktop_view.png)
 ![Desktop view - battle](./images/screenshots/desktop_view_battle.png)
-![Desktop view - rules](./images/screenshots/rules.png)
+![Desktop view - rules](./images/screenshots/desktop_view_rules.png)
 
 ### Links
 
