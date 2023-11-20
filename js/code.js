@@ -13,6 +13,8 @@ const closeRuleBtn = document.querySelector("#close-rule");
 const rulesContainer = document.querySelector(".rules");
 const background = document.querySelector(".background");
 
+let point;
+
 function fillClass(container) {
   if (container === "scissors") {
     return "SCISSORS";
@@ -61,7 +63,7 @@ function fillComputerChoose(elements) {
 }
 
 function showScore() {
-  let point = Number(pointContainer.textContent);
+  point = Number(pointContainer.textContent);
   if (
     (game.user === "SCISSORS" && game.computer === "PAPER") ||
     (game.user === "PAPER" && game.computer === "ROCK") ||
@@ -92,6 +94,10 @@ function showScore() {
     battle.style.display = "none";
     gameContainer.style.display = "flex";
   });
+
+  if (point >= 0) {
+    localStorage.setItem("numberPoint", point);
+  }
 }
 
 // Change view after choose figure
@@ -136,4 +142,11 @@ ruleBtn.addEventListener("click", () => {
 
   closeRuleBtn.addEventListener("click", removeClassActive);
   background.addEventListener("click", removeClassActive);
+});
+
+// Check local storage
+window.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem("numberPoint") !== null) {
+    pointContainer.textContent = localStorage.getItem("numberPoint");
+  }
 });

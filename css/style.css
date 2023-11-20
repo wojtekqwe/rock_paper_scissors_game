@@ -488,6 +488,7 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-width: 400px;
+  height: 95vh;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
